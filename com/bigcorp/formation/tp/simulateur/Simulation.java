@@ -2,6 +2,7 @@ package com.bigcorp.formation.tp.simulateur;
 
 import com.bigcorp.formation.tp.simulateur.bateau.Bateau;
 import com.bigcorp.formation.tp.simulateur.bateau.piece.Coque;
+import com.bigcorp.formation.tp.simulateur.bateau.piece.Moteur;
 
 public class Simulation {
 
@@ -30,10 +31,12 @@ public class Simulation {
         System.out.println("La coque coqueDuBateau2 a " + coqueDuBateau2.getPointsDeVie() + " points de vie.");
 
         //Appels de méthodes chaînées
-
         int pointsDeVieCoqueBateau2 = bateau2.getCoque().getPointsDeVie();
         System.out.println("La coque coqueDuBateau2 a " + pointsDeVieCoqueBateau2 + " points de vie.");
-
+        
+        //Rattachement d'un moteur au bateau 2, en construisant l'instance
+        //mais sans l'affecter à une variable
+        bateau2.setMoteur(new Moteur(100, 10) );
 
         System.out.println("Ont été construits : " + Bateau.getNombreDeBateauxConstruits());
 

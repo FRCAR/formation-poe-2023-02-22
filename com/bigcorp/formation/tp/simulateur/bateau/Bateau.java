@@ -1,6 +1,7 @@
 package com.bigcorp.formation.tp.simulateur.bateau;
 
 import com.bigcorp.formation.tp.simulateur.bateau.piece.Coque;
+import com.bigcorp.formation.tp.simulateur.bateau.piece.Moteur;
 
 /**
  * Classe Bateau : navigue sur les flots
@@ -27,10 +28,11 @@ public class Bateau {
      */
     private final String nom;
 
-    /** Attribut classique */
+    /** Attributs classiques */
     private double milesParcourus;
 
     private Coque coque;
+    private Moteur moteur;
 
     /**
      * Constructeur avec nom. Le nom étant final
@@ -75,6 +77,14 @@ public class Bateau {
 
     public void setCoque(Coque coque) {
         this.coque = coque;
+    }
+
+    public Moteur getMoteur() {
+        return moteur;
+    }
+
+    public void setMoteur(Moteur moteur) {
+        this.moteur = moteur;
     }
 
     /**
