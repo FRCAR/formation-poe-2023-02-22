@@ -1,5 +1,5 @@
 /**
- * Exemple sur les variables
+ * Exemple sur les conversions 
  */
 
 package com.bigcorp.formation.cours;
