@@ -1,8 +1,9 @@
 package com.bigcorp.formation.tp;
 
 public class Bateau {
-    
+
     private String nom;
+    private double milesParcourus;
 
     public String getNom() {
         return nom;
@@ -12,9 +13,20 @@ public class Bateau {
         this.nom = nom;
     }
 
-    @Override
-    public String toString() {
-        return nom  + " : super bateau";
+    public boolean prendLaMer() {
+        System.out.println("Je prends la mer");
+        return true;
+    }
+
+    public void navigue(double miles) {
+        System.out.println("Je navigue");
+        milesParcourus = milesParcourus + miles;
+    }
+
+    public void arriveAuPort() {
+        System.out.println("Je suis arrivé à bon port");
+        System.out.println("Pendant mon voyage, j'ai parcouru " + milesParcourus + " miles.");
+        milesParcourus = 0;
     }
 
 }

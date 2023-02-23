@@ -26,5 +26,10 @@ public class ExerciceVariables {
 		// dans ce fichier est inférieure ou égale à la dernière
 		// (de type entier) , afficher "ok" sinon afficher "ko"
 
+		boolean jaiFiniLeCodeJava = false;
+		boolean ilFaitBeau = true;
+		boolean jeParsALaPlage = ilFaitBeau && jaiFiniLeCodeJava;
+		System.out.println( ilFaitBeau && jaiFiniLeCodeJava ? "Youpi" : "Oh non, j'ai du Java à coder!!" );
+
 	}
 }
