@@ -8,7 +8,7 @@ public class ExerciceInstanciations {
 		//Définition et instanciation d'un nouvel objet dans une nouvelle variable
 		
 		//Affectation de la valeur null à cet objet
-		
+
 		
 
 	}
