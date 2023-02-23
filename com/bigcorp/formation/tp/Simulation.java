@@ -10,6 +10,8 @@ public class Simulation {
         bateau1.navigue(300);
         bateau1.navigue(200);
         bateau1.arriveAuPort();
+
+        System.out.println(Bateau.getNombreDeBateauxConstruits());
     }
 
 }
