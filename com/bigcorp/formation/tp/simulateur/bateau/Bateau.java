@@ -108,7 +108,6 @@ public class Bateau extends Object{
         milesParcourus = 0;
     }
 
-
     @Override
     public String toString() {
        return this.nom; 

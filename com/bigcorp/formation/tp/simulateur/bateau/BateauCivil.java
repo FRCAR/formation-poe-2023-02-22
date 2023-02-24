@@ -25,8 +25,23 @@ public class BateauCivil extends Bateau {
     @Override
     public boolean prendLaMer() {
         boolean appelClasseMere = super.prendLaMer();
-        System.out.println("J'ai appelé la classe mère et j'exécute du code spécifique.");
+        System.out.println("J'embarque : " + nbCivils + " civils.");
         return appelClasseMere;
     }
+
+    @Override
+    public void arriveAuPort() {
+        super.arriveAuPort();
+        System.out.println("Tuuut tuut, je décharge " + nbCivils + " civils.");
+    }
+
+    @Override
+    public void navigue(double miles) {
+        super.navigue(miles);
+        System.out.println("Je navigue avec : " + nbCivils + " civils.");
+    }
+
+
+
 
 }
