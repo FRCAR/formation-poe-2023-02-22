@@ -26,14 +26,11 @@ public class Boucles {
 		}
 
 		// Boucle while avec break et continue
+		System.out.println("\r\n boucle while");
 		while (true) {
 			System.out.println("Je vais afficher ce message une fois à cause du break");
 			break;
 		}
-
-
-
-		// System.out.println("\r\n boucle while");
 
 	}
 }
