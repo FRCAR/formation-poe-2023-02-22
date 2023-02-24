@@ -19,6 +19,8 @@ public class StringsEtWrappers{
 		
 
         // Saisir au clavier et affecter la saisie a une variable
+		// Scanner devrait être utilisé plus 'proprement'
+		// La suite du cours expliquera commment
 		Scanner scannerClavier = new Scanner(System.in);
 		System.out.println("Veuillez entrer une chaîne de caractères");
 		String venantDuClavier = scannerClavier.nextLine();
