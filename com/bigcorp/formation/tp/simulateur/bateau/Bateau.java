@@ -6,7 +6,7 @@ import com.bigcorp.formation.tp.simulateur.bateau.piece.Moteur;
 /**
  * Classe Bateau : navigue sur les flots
  */
-public class Bateau {
+public class Bateau extends Object{
 
     /**
      * attribut statique : a une seule valeur pour la classe (ne dépend pas
@@ -29,7 +29,7 @@ public class Bateau {
     private final String nom;
 
     /** Attributs classiques */
-    private double milesParcourus;
+    protected double milesParcourus;
 
     private Coque coque;
     private Moteur moteur;
@@ -46,10 +46,6 @@ public class Bateau {
         nombreDeBateauxConstruits++;
     }
 
-    public Bateau() {
-        this.nom = "nom-par-defaut";
-        nombreDeBateauxConstruits++;
-    }
 
     public Bateau(int param1, boolean param2, String param3) {
         System.out.println(param2);
@@ -110,6 +106,12 @@ public class Bateau {
         System.out.println("Je suis arrivé à bon port");
         System.out.println("Pendant mon voyage, j'ai parcouru " + milesParcourus + " miles.");
         milesParcourus = 0;
+    }
+
+
+    @Override
+    public String toString() {
+       return this.nom; 
     }
 
 }
