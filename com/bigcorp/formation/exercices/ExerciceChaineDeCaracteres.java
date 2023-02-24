@@ -14,13 +14,15 @@ public class ExerciceChaineDeCaracteres {
 
 		// Récupérer le 5eme caractère de la deuxième String
 		System.out.println(whatsWrong.charAt(4));
+
 		// Récupérer la chaîne de caractères composée des 10 derniers caractères de la
 		// deuxième String
-		String derniersCaracteres = whatsWrong.substring(whatsWrong.length() - 10);
+		int index = whatsWrong.length() - 10;
+		String derniersCaracteres = whatsWrong.substring(index);
 		System.out.println(derniersCaracteres);
-		// Changer les 10 derniers caractères de la deuxieme String en majuscule.
-		String premiersCaracteres = whatsWrong.substring(0, whatsWrong.length() - 10);
 
+		// Changer les 10 derniers caractères de la deuxieme String en majuscule.
+		String premiersCaracteres = whatsWrong.substring(0, index);
 		System.out.println(premiersCaracteres + derniersCaracteres.toUpperCase());
 
 	}
