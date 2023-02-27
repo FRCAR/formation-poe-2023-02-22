@@ -72,16 +72,21 @@ public class Collections {
 
         // Utilisation de iterator (utile seulement si on veut modifier la collection en
         // itérant dessus)
+        int i = 0;
         for (Iterator<String> ite = monPremierSet.iterator(); ite.hasNext();) {
             String element = ite.next();
             System.out.println("Dans monPremierSet, avec l'itérateur, j'ai : " + element);
-            ite.remove();
+            if (i == 1) {
+                ite.remove();
+            }
+            i++;
         }
 
         // Vidage du set et parcours : ne fait rien, mais ne plante pas
         // Il est permis d'itérer sur une collection vide, mais pas une
         // collection nulle !
-        monPremierSet.clear();
+        // monPremierSet.clear();
+        System.out.println("J'ai supprimé le deuxième élément trouvé avec l'itérateur");
         for (String element : monPremierSet) {
             System.out.println("Dans monPremierSet, j'ai : " + element);
         }
@@ -99,16 +104,16 @@ public class Collections {
         notes.put("Jean", 8);
         notes.put("Mohamed", 13);
         notes.put("Jacqueline", 3);
-        //La ligne ci-dessous remplace la précédente valeur (3) 
-        //par la nouvelle (13)
+        // La ligne ci-dessous remplace la précédente valeur (3)
+        // par la nouvelle (13)
         notes.put("Jacqueline", 13);
         notes.size();
         notes.remove("Lucie");
 
         System.out.println("La note de Jacqueline vaut : " + notes.get("Jacqueline"));
 
-        //Il est possible de mettre n'importe quel type dans la clé et la valeur
-        //Exemple ici la valeur contient une liste d'Integer
+        // Il est possible de mettre n'importe quel type dans la clé et la valeur
+        // Exemple ici la valeur contient une liste d'Integer
         Map<String, List<Integer>> notesMultiples = new HashMap<>();
         notesMultiples.put("Lucie", new ArrayList<>());
         notesMultiples.get("Lucie").add(4);
