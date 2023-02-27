@@ -1,4 +1,7 @@
-package com.bigcorp.formation.tp.simulateur.bateau;
+package com.bigcorp.formation.tp.simulateur.bateau.implementation;
+
+import com.bigcorp.formation.tp.simulateur.bateau.Cargo;
+import com.bigcorp.formation.tp.simulateur.bateau.Submersible;
 
 public class SousMarinRavitailleur extends BateauMilitaire 
     implements Submersible, Cargo {

@@ -1,7 +1,7 @@
 package com.bigcorp.formation.tp.simulateur;
 
 import com.bigcorp.formation.tp.simulateur.bateau.Cargo;
-import com.bigcorp.formation.tp.simulateur.bateau.PorteContainer;
+import com.bigcorp.formation.tp.simulateur.bateau.implementation.PorteContainer;
 
 public class SimulationAvecInterfaces {
 

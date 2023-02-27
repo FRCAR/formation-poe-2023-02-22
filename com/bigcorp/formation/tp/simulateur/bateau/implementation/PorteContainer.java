@@ -1,4 +1,6 @@
-package com.bigcorp.formation.tp.simulateur.bateau;
+package com.bigcorp.formation.tp.simulateur.bateau.implementation;
+
+import com.bigcorp.formation.tp.simulateur.bateau.Cargo;
 
 /**
  * Un porte container est un bateau civil qui offre

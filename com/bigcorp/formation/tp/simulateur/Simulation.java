@@ -1,7 +1,7 @@
 package com.bigcorp.formation.tp.simulateur;
 
 import com.bigcorp.formation.tp.simulateur.bateau.Bateau;
-import com.bigcorp.formation.tp.simulateur.bateau.BateauCivil;
+import com.bigcorp.formation.tp.simulateur.bateau.implementation.BateauCivil;
 import com.bigcorp.formation.tp.simulateur.bateau.piece.Coque;
 import com.bigcorp.formation.tp.simulateur.bateau.piece.Moteur;
 

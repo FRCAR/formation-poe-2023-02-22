@@ -1,4 +1,6 @@
-package com.bigcorp.formation.tp.simulateur.bateau;
+package com.bigcorp.formation.tp.simulateur.bateau.implementation;
+
+import com.bigcorp.formation.tp.simulateur.bateau.Bateau;
 
 public class BateauMilitaire extends Bateau {
     private int forceCanon;
