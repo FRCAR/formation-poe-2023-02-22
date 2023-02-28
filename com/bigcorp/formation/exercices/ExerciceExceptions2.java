@@ -7,7 +7,11 @@ import java.util.Scanner;
 public class ExerciceExceptions2 {
 	
 	public static void main(String[] args) {
-		System.out.println("Le résultat est : " + recuperationDonneesEtLanceCalcul());
+		try{
+			System.out.println("Le résultat est : " + recuperationDonneesEtLanceCalcul());
+		}catch(RuntimeException rte){
+			System.out.println("Une erreur irrécupérable est survenue : " + rte.getMessage());
+		}
 	}
 
 	public static int recuperationDonneesEtLanceCalcul() {
@@ -32,8 +36,7 @@ public class ExerciceExceptions2 {
 	}
 
 	public static int lanceCalculPourDeVrai(int a, int b) {
-		//Appeler ici prepareCalcul() et trouver un moyen de gérer au mieux
-		//le problème
+		prepareCalcul();
 		return a + b;
 	}
 	

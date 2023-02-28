@@ -11,6 +11,7 @@ public class Exceptions {
 		// Appel de methode qui ne marche pas top
 		// et utilisation des méthodes de l'exception
 		try {
+			// Ici je crée des fichiers temporaires
 			methodeQuiMarchePasTop();
 		} catch (MonException monException) {
 			System.out.println("Erreur ! ");
@@ -19,6 +20,8 @@ public class Exceptions {
 			} else {
 				System.out.println("L'erreur n'est pas grave");
 			}
+		} finally {
+			// Ici je vais supprimer mes fichiers temporaires
 		}
 
 		// try catch de lecture de smon fichier
@@ -32,9 +35,22 @@ public class Exceptions {
 			System.out.println("Désolé, le fichier n'existe pas ! ");
 		} catch (IOException ioe) {
 			System.out.println("Désolé, problème de lecture ! ");
+		} finally {
+			try {
+				fileInputStream.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 
 		// try with resources
+		File monAutreFichier = new File("mon-fichier.txt");
+		try (FileInputStream fis = new FileInputStream(monAutreFichier)) {
+			byte[] fileBytes = fileInputStream.readAllBytes();
+			System.out.println("J'ai lu le fichier : son premier octet valait : " + fileBytes[0]);
+		} catch (IOException ioe) {
+			System.out.println(ioe.getMessage());
+		}
 
 	}
 
