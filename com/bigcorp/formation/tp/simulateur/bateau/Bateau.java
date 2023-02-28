@@ -6,7 +6,7 @@ import com.bigcorp.formation.tp.simulateur.bateau.piece.Moteur;
 /**
  * Classe Bateau : navigue sur les flots
  */
-public class Bateau extends Object{
+public class Bateau implements Comparable<Bateau> {
 
     /**
      * attribut statique : a une seule valeur pour la classe (ne dépend pas
@@ -46,7 +46,6 @@ public class Bateau extends Object{
         nombreDeBateauxConstruits++;
     }
 
-
     public Bateau(int param1, boolean param2, String param3) {
         System.out.println(param2);
         this.nom = param3;
@@ -69,6 +68,14 @@ public class Bateau extends Object{
 
     public Coque getCoque() {
         return coque;
+    }
+
+    public double getMilesParcourus() {
+        return milesParcourus;
+    }
+
+    public void setMilesParcourus(double milesParcourus) {
+        this.milesParcourus = milesParcourus;
     }
 
     public void setCoque(Coque coque) {
@@ -110,7 +117,25 @@ public class Bateau extends Object{
 
     @Override
     public String toString() {
-       return this.nom; 
+        return this.nom;
+    }
+
+    /**
+     * Ici on implémente compareTo, la méthode
+     * de Comparable.
+     * compareTo doit renvoyer une valeur négative
+     * si this est 'plus petite' que autreBateau.
+     * dans ce cas this est placé AVANT autreBateau
+     * lors du tri.
+     * compareTo doit renvoyer une valeur positive
+     * si this est 'plus grande' que autreBateau.
+     * Dans ce cas this est placé APRES autreBateau
+     * lors du tri.
+     * compareTo renvoie 0 dans les autres cas.
+     */
+    @Override
+    public int compareTo(Bateau autreBateau) {
+        return this.nom.compareTo(autreBateau.nom);
     }
 
 }
