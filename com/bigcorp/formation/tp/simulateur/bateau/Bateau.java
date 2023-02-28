@@ -33,6 +33,7 @@ public class Bateau implements Comparable<Bateau> {
 
     private Coque coque;
     private Moteur moteur;
+    
 
     /**
      * Constructeur avec nom. Le nom étant final

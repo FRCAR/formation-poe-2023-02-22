@@ -2,6 +2,8 @@ package com.bigcorp.formation.exercices;
 
 import java.util.Scanner;
 
+import com.bigcorp.formation.tp.simulateur.bateau.Bateau;
+
 // Classe principale
 public class ExerciceConditions {
 	public static void main(String[] args) {
@@ -70,7 +72,7 @@ public class ExerciceConditions {
 		// plus tard)
 		scannerClavier.close();
 		
-		Bateau bateau = new Bateau();
+		Bateau bateau = new Bateau("coucou");
 		for (int i = 0; i < 4; i++) {
 			System.out.println(bateau.toString() + i);
 		}
