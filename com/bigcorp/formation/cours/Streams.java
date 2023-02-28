@@ -42,6 +42,8 @@ public class Streams {
 			}
 		}
 
+		superList.stream().peek(s -> System.out.println("peek " + s)).filter(s ->s.length() > 0).forEach(s -> System.out.println("colegram " + s));
+
 
 
 	}
