@@ -33,7 +33,6 @@ public class Bateau implements Comparable<Bateau> {
 
     private Coque coque;
     private Moteur moteur;
-    
 
     /**
      * Constructeur avec nom. Le nom étant final
@@ -119,6 +118,13 @@ public class Bateau implements Comparable<Bateau> {
     @Override
     public String toString() {
         return this.nom;
+    }
+
+    public int calculeAgeCoque() throws Exception {
+        //Appeler un calculateur très savant
+        //qui fait des calculs qui peuvent planter
+        new CalculateurAgeCoque().calculeAge(this);
+        return 43;
     }
 
     /**
